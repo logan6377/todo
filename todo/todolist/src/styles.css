@@ -1,13 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 html{ 
-        /*
+        
         background: #41b6c0;  
-        background: -moz-linear-gradient(90deg, #41b6c0 0%, #ffffff 100%);  
-        background: -webkit-linear-gradient(90deg, #41b6c0 0%,#ffffff 100%);  
-        background: linear-gradient(90deg, #41b6c0 0%,#ffffff 100%); 
+        background: -moz-linear-gradient(360deg, #41b6c0 0%, #ffffff 100%);  
+        background: -webkit-linear-gradient(360deg, #41b6c0 0%,#ffffff 100%);  
+        background: linear-gradient(360deg, #41b6c0 0%,#ffffff 100%); 
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#41b6c0', endColorstr='#ffffff',GradientType=1 );  
-        */
-        background: #f5f6fa
+        width: 100%;
+        height: 100%;
 }
 body{
         background: none;
@@ -100,6 +100,7 @@ body{
         width: 700px;
         padding: 100px 0; 
 }
+ 
 .todo-login.signin-main .form-wrap .login .form-main {
         width: 400px;
         margin: 20px auto;
@@ -136,6 +137,52 @@ body{
         float: left; 
         position: relative
 }
+/*DashBoard*/
+.todo-login.signin-main .form-wrap .dashboard {
+        background: #f8f8f8;
+        height: 500px;
+        width: 700px;
+        padding: 20px 0; 
+}
+ 
+.todo-login.signin-main .form-wrap .dashboard .form-main {
+        width: 600px;
+        margin: 20px auto;
+}
+.todo-login.signin-main .form-wrap .dashboard .form-footer {
+        width: 400px;
+        margin: 20px auto; 
+}
+.todo-login.signin-main .form-wrap .dashboard .form-footer a {
+        color: #999;
+        font-size: 10pt; 
+}
+.todo-login.signin-main .form-wrap .dashboard .form-footer a:hover {
+        text-decoration: none; 
+}
+.todo-login.signin-main .form-wrap .dashboard .form-footer .fa-unlock-alt {
+        font-size: 10pt;
+        color: #fff;
+        border-radius: 50%;
+        padding: 5px 8px;
+        background: #ccc;
+        margin-right: 7px; 
+}
+.todo-login.signin-main .form-wrap .dashboard .form-footer .fa-check {
+        font-size: 10pt;
+        color: #fff;
+        border-radius: 50%;
+        padding: 5px;
+        background: #ccc;
+        margin-right: 7px; 
+}
+.todo-login.signin-main .form-wrap .dashboard,
+.todo-login.signin-main .form-wrap .title {
+        float: left; 
+        position: relative
+}
+/*DashBoard*/
+
 .todo-login.signin-main .form-wrap .title {
         width: 400px; 
 }
@@ -203,3 +250,88 @@ body{
         top: 2%;
 }
 
+.day{
+        color: #ef5051;
+        font-family: 'Open Sans', sans-serif;
+       font-weight: 600 !important;
+       font-size: 30px;
+}
+.month{
+           color: #a8a7a7;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 22px;
+}
+.todo-login.signin-main .dashboard .form-control{
+        border:0 !important;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600 !important;
+        font-size: 28px;
+        color: #cacaca !important;
+        height: 95px
+}
+
+.dashboard .form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #cacaca !important
+}
+.dashboard .form-control::-moz-placeholder { /* Firefox 19+ */
+  color: #cacaca !important
+}
+.dashboard .form-control:-ms-input-placeholder { /* IE 10+ */
+ color: #cacaca !important
+}
+.dashboard .form-control:-moz-placeholder { /* Firefox 18- */
+  color: #cacaca !important
+}
+.dashboard .addToDo{
+        background: #fa6769;
+        width: 70px;
+        height: 70px;
+        color: #FFF;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600 !important;
+        font-size: 32px;
+        border-radius: 70px;
+        line-height: 0;
+        position: absolute;
+        top: 52px;
+        right: -29px;
+}
+.todo-login .btn.addToDo:active{
+        border-radius: 70px !important;
+}
+.dashboard .addToDo:hover{
+        background: #fc7a7a
+}
+.todo-group{
+        position: relative
+}
+.todo-list ul{
+        margin: 0;
+        padding: 0;
+        margin-top:40px 
+}
+.todo-list li{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 500 !important;
+        font-size: 20px;
+        padding: 16px 10px; 
+        color: #9494a0;
+        border-bottom: 1px solid #d8dde2;
+        cursor: pointer
+}
+.todo-list li:hover{
+        background: #f6f6f6
+}
+.todo-list li:nth-child(odd){ 
+}
+.todo-list li span{
+        float:right
+}
+.error{
+        color: #F00;
+        font-size: 12px;
+}
+.completed{
+        text-decoration: line-through; 
+}

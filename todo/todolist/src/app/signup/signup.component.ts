@@ -18,6 +18,7 @@ export class SignupComponent implements OnInit {
   lname:string;
   email:string;
   pword:string;
+ 
 
   udetail:User[]=[];
   showhidelogin:boolean=false;

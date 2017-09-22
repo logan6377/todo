@@ -11,9 +11,23 @@
                               <span class="statusTxt">{{pageStatus}}</span>
                         </div>            
 
-                        <div class="login">                              
-                              <app-login *ngIf="!showhidelogin" (exportBoolean)="importBoolean($event)" (userLoggedValue)="userLogin($event)"></app-login>
-                              <app-signup *ngIf="showhidelogin" (exportUser)="userInfo($event)" (exportBoolean)="fromRegister($event)"></app-signup> 
+                        <div class="login" *ngIf="!showhideDash">                              
+                              <app-login 
+                                    *ngIf="!showhidelogin" 
+                                    (exportBoolean)="importBoolean($event)" 
+                                    (userLoggedValue)="userLogin($event)"
+                                    (exportstatusText)="importStatusText($event)"
+                                    [showerror]="error"
+                              ></app-login>
+                              <app-signup 
+                                    *ngIf="showhidelogin" 
+                                    (exportUser)="userInfo($event)" 
+                                    (exportBoolean)="fromRegister($event)"
+                              ></app-signup> 
+                        </div>
+
+                        <div class="dashboard" *ngIf="showhideDash">
+                              <app-dashboard></app-dashboard>
                         </div>
 
                   </div>

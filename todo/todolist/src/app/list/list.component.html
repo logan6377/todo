@@ -1,0 +1,1 @@
+<li *ngFor="let item of passData; let i = index" (click)="completedTask(i)" [class.completed]="linethrough[i]">{{i+1}}. {{item}}<span><img src="../assets/delete.png" (click)="deleteList(i)"></span></li> 

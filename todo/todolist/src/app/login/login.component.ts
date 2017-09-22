@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { UserinfoService } from "../userinfo.service";
 import { User, UserLog } from "../signup/user";
@@ -13,7 +13,12 @@ export class LoginComponent implements OnInit {
   fname1:string;
   pword1:string;
   showhidelogin:boolean=true;
-  getUser:User; 
+  getUser:User;
+  statusText:string;
+  pstatus:string = "Registration"; 
+  loginFailed:string = "Login Failed!!! Please check Username or Password";
+
+  @Input() showerror; 
   
   constructor(private _serv:UserinfoService) {  
   }
@@ -22,11 +27,13 @@ export class LoginComponent implements OnInit {
   } 
 
   @Output() exportBoolean = new EventEmitter<boolean>();
+  @Output() exportstatusText = new EventEmitter<string>();
   @Output() userLoggedValue = new EventEmitter<UserLog>();
 
   showSignUpcomp(){
     this.showhidelogin = !this.showhidelogin;
     this.exportBoolean.emit(this.showhidelogin); 
+    this.exportstatusText.emit(this.pstatus)
   } 
 
   login(){

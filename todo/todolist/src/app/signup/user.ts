@@ -3,6 +3,7 @@ export class User{
   lname:string;
   email:string;
   pword:string;
+  pstatus:string;
 }
 export class UserLog{
   fname1:string;
