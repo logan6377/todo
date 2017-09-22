@@ -10,7 +10,7 @@ export class AppComponent {
 
   pageStatus:string="Welcome to Todo task App !!!"; 
   showhidelogin:boolean=false;
-  passtoLogin:User[];
+  passtoLogin:User[]=[];
 
   fnameReg:string;
   pwordReg:string;
@@ -21,21 +21,21 @@ export class AppComponent {
     this.showhidelogin = !_value;
   } 
 
-  userInfo(_user:User[]){  
-    //this.fnameReg = _user
-    console.log('aa', this.passtoLogin);
-    console.log('SignUpdata', this.passtoLogin);
+  userInfo(_user:any){  
+    this.fnameReg =  _user.fname;
+    this.pwordReg = _user.pword;
   }
 
-  userLogin(_user:UserLog[]){
-    console.log('LoginData', _user);
+  userLogin(_user:any){    
+    this.fnameLog = _user.fname1;
+    this.pwordLog = _user.pword1;
 
-    console.log('pass',this.passtoLogin)
+    if(this.fnameLog==this.fnameReg && this.pwordLog==this.pwordReg){
+      alert('Login Successfull')
+    }else{
+      alert('Login Failed')
+    }
   }
-
-
-
-
 
   fromRegister(_boo:boolean){
     console.log('_boo', _boo);
