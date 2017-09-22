@@ -22,7 +22,7 @@ export class ListComponent implements OnInit {
 
 
   deleteList(index){ 
-    this.removeList.emit(index)
+    this.removeList.emit(index);
   }
 
   completedTask(index){
